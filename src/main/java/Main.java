@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        String cuentaNumero = "123456789";
+        String numeroCuenta = "123456789";
         double balance = 1500.75;
         int contrasena = 1234;
 
