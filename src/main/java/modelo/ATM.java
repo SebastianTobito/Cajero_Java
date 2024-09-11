@@ -2,7 +2,10 @@ package modelo;
 
 import java.util.Scanner;
 
-public class ATM {
+public class ATM implements Autenticacion {
+
+
+
     private Calculadora calculadora = new Calculadora();
 
     public void start(){
@@ -31,6 +34,14 @@ public class ATM {
                     System.out.println("Selección no válida");
             }
         }
+
+    }
+
+    @Override
+    public boolean atenticacion(String pin) {
+        if(pin.equals(pin)){
+            return true;
+        }else{return false;}
 
     }
 }

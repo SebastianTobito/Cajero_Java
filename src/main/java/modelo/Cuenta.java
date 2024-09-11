@@ -1,12 +1,14 @@
 package modelo;
 
-public class Cuenta {
+public abstract class Cuenta implements Autenticacion{
     private String cuentaNumero;
     private double balance;
+    private String pin;
 
-    public Cuenta(String cuentaNumero, double balanceInicial) {
+    public Cuenta(String cuentaNumero, double balanceInicial, String pin) {
         this.cuentaNumero = cuentaNumero;
         this.balance = balanceInicial;
+        this.pin = pin;
     }
 
     public String getCuentaNumero() {
@@ -17,11 +19,11 @@ public class Cuenta {
         return balance;
     }
 
-    public void deposito(double monto){
+    public abstract void deposito(double monto){
         this.balance += monto;
     }
 
-    public void retiro(double monto) {
+    public abstract void retiro(double monto) {
         if (monto > this.balance){
             System.out.println("Fondos insuficientes");
         }else{
@@ -29,5 +31,8 @@ public class Cuenta {
         }
     }
 
-
+    @Override
+    public boolean atenticacion(String pin) {
+        return this.pin.equals(pin);
+    }
 }
