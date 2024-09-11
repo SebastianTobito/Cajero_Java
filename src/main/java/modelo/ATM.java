@@ -1,3 +1,5 @@
+package modelo;
+
 import java.util.Scanner;
 
 public class ATM {
@@ -8,7 +10,7 @@ public class ATM {
         boolean exit = false;
 
         while (!exit){
-            System.out.println(" Bienvendio a JavaBank ATM"
+            System.out.println(" Bienvendio a JavaBank modelo.ATM"
                     +"\n Seleccione una operacion a realizar:"
                     +"\n 1. Relizar una transaccion"
                     +"\n 2. Usar la calculadora"
